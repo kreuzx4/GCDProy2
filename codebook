@@ -1,0 +1,48 @@
+#Test & Train files are stored in the following variables
+sTest
+xTest 
+yTest 
+sTrain
+xTrain 
+yTrain
+features 
+
+Columns are replaced with the names in features
+xTrain contains de rowbinded data but is then stored in xVar with  all the data , we remove the previous variables
+xvar
+Variables removed: xTrain / xTest/ features
+
+Subject data is created in sTrain & sTest
+sTrain contains the rowbinded data , but is then stored in subs with all the data. we remove the previous variables
+subs now has all the data , we remove the previous variables
+Variables removed: sTrain / sTest
+
+Activity data is created. 
+Names are replaced in yTrain and yTest
+yTrain contains the the rowbinded data , but is then stored in act with all the data. we remove the previous variables
+act now has all the data , we remove the previous variables
+Variables removed: yTrain / yTest
+
+Activity Labels are replaced
+A new column in act is created with "unset"
+Numbers are replaced by the labels ("Walking" /  "Walking_Upstairs" / "Walking_Downstairs"/ "Sitting" / "Standing"
+/"Laying")
+
+
+xvar now contains all the data from subs & act
+
+A new subset for the mean and STD is created. 
+sMean contains all the columns that include "mean" in their name
+sStd contains all the columns that include "std" in their name
+sStd now contains the means and std, we need to add subject & activities by column bindin
+
+dataset now contains all the information of the tidy data, the column name Activity is renamed
+Variables removed:sStd
+
+#Create & save a new dataset 
+By melting and Casting by subject and activity we create a new dataset with the mean of all variables
+Variables:
+meltDataset - Contains melted data
+finalDS - Creates the mean operation
+
+the finalDS of the tidy data is printed into a txt file:"finalData.txt"
